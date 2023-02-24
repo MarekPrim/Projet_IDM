@@ -1,0 +1,56 @@
+import 'file:/home/greenteam/N7/S8/S8/IDM/fr.n7.simplePDL/SimplePDL.ecore.ecore'
+
+package simplepdl
+--
+-- example invariant with a custom error message to verify that
+-- the 'name' property of all 'simplepdl::Process' instances is non-null
+--
+
+
+context Process
+inv warningSeverity: false
+inv withMessage('Explicit message in process ' + self.name + ' (withMessage)'): false
+--inv errorSeverity: null
+
+
+context ProcessElement
+def: process(): Process =
+	Process.allInstances()
+		->select(p | p.processElements->includes(self))
+		->asSequence()->first()
+
+context Process
+inv validName('Invalid name: ' + self.name):
+	self.name.matches('[A-Za-z_][A-Za-z0-9_]*')
+
+context ProcessElement
+def: process(): Process =
+	Process.allInstances()
+		->select(p | p.processElement->includes(self))
+		->asSequence()->first()
+
+context WorkSequence
+inv successorAndPredecessorInSameProcess('Activities not in the same process : '
+		+ self.predecessor.name + ' in ' + self.predecessor.process().name+ ' and '
+		+ self.successor.name + ' in ' + self.successor.process().name):
+	self.process() = self.successor.process()
+	and self.process() = self.predecessor.process()
+
+inv noReflexiveLink('Reflexive link between ' + self.predecessor.name + ' and ' + self.successor.name):
+	self.predecessor <> self.successor
+
+context WorkDefinition
+inv uniqNameInWorkSequence('WorkSequence name not unique in process ' + self.process().name):
+	self.Process.processElement
+	->select(pe | pe.oclIsKindOf(WorkDefinition))
+	->select(wd | wd.oclAsType(WorkDefinition).name = self.name)
+	->size() = 1
+
+inv nameAtLeastTwoChars('WorkDefinition name must be at least two characters long'):
+	self.name.size() >= 2
+
+inv nameAlphanumeric('WorkDefinition name must be alphanumeric and start with a letter or underscore'):
+	self.name.matches('^[a-zA-Z_][a-zA-Z0-9_]*')
+
+
+endpackage

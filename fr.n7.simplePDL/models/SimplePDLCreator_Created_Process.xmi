@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ASCII"?>
+<simplepdl:Process xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:simplepdl="http://simplepdl" name="Mon premier processus">
+  <processElement xsi:type="simplepdl:WorkDefinition" linksToSuccessors="//@processElement.2 //@processElement.3" name="Ma premi&#xe8;re WorkDefinition"/>
+  <processElement xsi:type="simplepdl:WorkDefinition" linksToPredecessors="//@processElement.2 //@processElement.3" name="Ma deuxi&#xe8;me WorkDefinition"/>
+  <processElement xsi:type="simplepdl:WorkSequence" linkType="finishToFinish" predecessor="//@processElement.0" successor="//@processElement.1"/>
+  <processElement xsi:type="simplepdl:WorkSequence" predecessor="//@processElement.0" successor="//@processElement.1"/>
+</simplepdl:Process>

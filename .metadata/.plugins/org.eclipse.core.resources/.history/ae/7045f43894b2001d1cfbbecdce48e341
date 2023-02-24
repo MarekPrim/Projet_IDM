@@ -1,0 +1,78 @@
+import 'SimplePDL.ecore'
+
+package simplepdl
+--
+-- example invariant with a custom error message to verify that
+-- the 'name' property of all 'simplepdl::Process' instances is non-null
+--
+
+
+context Process
+inv warningSeverity: false
+inv withMessage('Explicit message in process ' + self.name + ' (withMessage)'): false
+--inv errorSeverity: null
+
+
+context ProcessElement
+def: process(): Process =
+	Process.allInstances()
+		->select(p | p.processElement->includes(self))
+		->asSequence()->first()
+
+context Process
+inv validName('Invalid name: ' + self.name):
+	self.name.matches('[A-Za-z_][A-Za-z0-9_]*')
+
+context ProcessElement
+def: process(): Process =
+	Process.allInstances()
+		->select(p | p.processElement->includes(self))
+		->asSequence()->first()
+
+context WorkSequence
+inv successorAndPredecessorInSameProcess('Activities not in the same process : '
+		+ self.predecessor.name + ' in ' + self.predecessor.process().name+ ' and '
+		+ self.successor.name + ' in ' + self.successor.process().name):
+	self.process() = self.successor.process()
+	and self.process() = self.predecessor.process()
+
+inv noReflexiveLink('Reflexive link between ' + self.predecessor.name + ' and ' + self.successor.name):
+	self.predecessor <> self.successor
+
+context WorkDefinition
+inv uniqNameInWorkSequence('WorkSequence name not unique in process ' + self.process().name):
+	self.process().processElement
+	->select(pe | pe.oclIsKindOf(WorkDefinition))
+	->select(wd | wd.oclAsType(WorkDefinition).name = self.name)
+	->size() = 1
+
+inv nameAtLeastTwoChars('WorkDefinition name must be at least two characters long'):
+	self.name.size() >= 2
+
+inv nameAlphanumeric('WorkDefinition name must be alphanumeric and start with a letter or underscore'):
+	self.name.matches('^[a-zA-Z_][a-zA-Z0-9_]*')
+
+inv noRedundantNeed('Some ressources in the WorkDefinition '+self.name+' are redundant'):
+	self.needs->forAll(n1, n2 : Need | n1 <> n2 implies n1.ressource.name <> n2.ressource.name)
+
+context Ressource
+inv atLeastOneRessource('nbRessourceDisponible must be at least 1'):
+	self.nbRessourceDisponible >= 1
+
+inv uniqueNameAmongRessources('Ressource name not unique in process ' + self.process().name):
+	self.process().processElement
+	->select(pe | pe.oclIsKindOf(Ressource))
+	->select(r | r.oclAsType(Ressource).name = self.name)
+	->size() = 1
+
+inv validName('Invalid name: ' + self.name):
+	self.name.matches('[A-Za-z_][A-Za-z0-9_]*')
+
+context Need
+inv needAndWorkDefinitionInSameProcess('Need and WorkDefinition not in the same process : '):
+	self.process() = self.workDefinition.process()
+
+inv correctNumberOfNbRessources('Need nbRessources must be at least 1'):
+	self.nbRessources >= 1 and self.nbRessources <= self.ressource.nbRessourceDisponible
+
+endpackage

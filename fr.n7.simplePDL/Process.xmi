@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simplepdl:Process
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:simplepdl="http://simplepdl"
+    xsi:schemaLocation="http://simplepdl SimplePDL.ecore.ecore"
+    name="DEV">
+  <processElement/>
+  <processElement
+      xsi:type="simplepdl:WorkSequence"
+      linkType="startToFinish"
+      predecessor="//@processElement.2"
+      successor="//@processElement.3"/>
+  <processElement
+      xsi:type="simplepdl:WorkDefinition"
+      linksToSuccessors="//@processElement.1"
+      name="Prog"/>
+  <processElement
+      xsi:type="simplepdl:WorkDefinition"
+      linksToPredecessors="//@processElement.1"
+      name="Test"/>
+</simplepdl:Process>
