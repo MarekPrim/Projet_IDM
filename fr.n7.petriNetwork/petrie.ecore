@@ -10,7 +10,11 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="petriElements" upperBound="-1"
         eType="#//PetriElement" containment="true" eOpposite="#//PetriElement/petrinet"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Transition" eSuperTypes="#//Node"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Transition" eSuperTypes="#//Node">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="min" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="max" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="65556"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Place" eSuperTypes="#//Node">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="marking" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -18,8 +22,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="Arc" eSuperTypes="#//PetriElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="weight" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isReadArc" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
         eType="#//Node" eOpposite="#//Node/incoming"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
@@ -32,4 +34,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="outgoing" upperBound="-1"
         eType="#//Arc" eOpposite="#//Arc/source"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ArcSimple" eSuperTypes="#//Arc"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ArcRead" eSuperTypes="#//Arc"/>
 </ecore:EPackage>

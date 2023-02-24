@@ -2923,3 +2923,18 @@ Caused by: java.lang.Exception: Resource '/fr.n7.simplePDL.editor' does not exis
 	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
 	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
 	... 24 more
+!SESSION 2023-02-24 14:03:08.103 -----------------------------------------------
+eclipse.buildId=4.26.0.20221201-1200
+java.version=17.0.3
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.modeling.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.modeling.product
+
+!ENTRY org.apache.log4j 4 0 2023-02-24 15:04:48.138
+!MESSAGE org.eclipse.xtext.ui.editor.templates.CrossReferenceTemplateVariableResolver  - CrossReference 'TypeExpCS' could not be resolved.
+
+
+!ENTRY org.apache.log4j 4 0 2023-02-24 15:05:05.898
+!MESSAGE org.eclipse.xtext.ui.editor.templates.CrossReferenceTemplateVariableResolver  - CrossReference 'TypeExpCS' could not be resolved.
+
