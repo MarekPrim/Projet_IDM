@@ -55,5 +55,9 @@ inv noRedundantNeed('Two Arcs with the same source and the same target should no
 	->collect(e | e.oclAsType(Arc))
 	->select(e | self.source = e.source and self.target = e.target)
 	->size() = 1
+	
+context Transition
+inv timeIsStriclyPositive('Time interval in Transition should be positive'):
+	self.min >= 0 and self.max >= 0
 		
 endpackage

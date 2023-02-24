@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<petrie:PetriNet
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:petrie="http://petrie"
+    xsi:schemaLocation="http://petrie petrie.ecore"
+    name="fail">
+  <petriElements
+      xsi:type="petrie:Place"
+      name="start"
+      outgoing="//@petriElements.1"/>
+  <petriElements
+      xsi:type="petrie:Arc"
+      weight="1"
+      target="//@petriElements.2"
+      source="//@petriElements.0"/>
+  <petriElements
+      xsi:type="petrie:Transition"
+      name="trans"
+      incoming="//@petriElements.1"/>
+</petrie:PetriNet>
