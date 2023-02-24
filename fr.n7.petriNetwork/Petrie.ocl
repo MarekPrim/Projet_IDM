@@ -23,9 +23,6 @@ context ArcSimple
 inv hasStrictPositiveWeight('Regular arc weight should be strictly positive'):
 	self.weight > 0
 	
-context ArcRead
-inv hasNoWeight('Read-only arc weight should be strictly positive'):
-	self.weight = 0
 	
 context Arc
 inv sourceAndTargetInSamePetriNet('Arc source and target should belong to the same PetriNet than the Arc'):
