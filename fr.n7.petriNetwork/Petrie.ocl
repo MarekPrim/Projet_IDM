@@ -34,8 +34,7 @@ inv sourceAndTargetInSamePetriNet('Arc source and target should belong to the sa
 context ArcRead
 inv arcFromTransitionIsNotReadArc('A arc from a Transition cannot be a read-only arc'):
 	not (self.source.oclIsKindOf(Transition))
-	--not (self.source.oclIsKindOf(Transition) and self.isReadArc) or (self.source.oclAsType(Node).outgoing.isReadOnly and self.isReadArc)	
-
+	
 context Place
 inv hasPositiveMarking('Place marking should be positive: ' + self.name):
 	self.marking >= 0
