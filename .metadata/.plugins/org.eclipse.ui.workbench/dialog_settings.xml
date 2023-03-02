@@ -4,9 +4,11 @@
 		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.emf.importer.ui.EMFModelWizard"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
 			<item value="org.eclipse.emf.codegen.ecore.ui.wizardCategory"/>
-			<item value="org.eclipse.ocl.ui.wizards"/>
+			<item value="org.eclipse.emf.parsley.wizards"/>
+			<item value="org.eclipse.emf.parsley.wizards/org.eclipse.emf.parsley.project.Examples"/>
 			<item value="org.eclipse.ui.Examples"/>
-			<item value="org.eclipse.ui.Examples/org.eclipse.emf.query.examples.category"/>
+			<item value="org.eclipse.ui.Examples/org.eclipse.emf.examples.EMF"/>
+			<item value="org.eclipse.ui.Examples/org.eclipse.emf.parsley.ui.Examples"/>
 			<item value="org.eclipse.ui.Examples/org.eclipse.emf.validation.examples.category"/>
 		</list>
 	</section>
@@ -22,5 +24,12 @@
 		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
 			<item value="/home/greenteam/N7/S8/S8/IDM_not_workspace"/>
 		</list>
+	</section>
+	<section name="InstallationDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="36"/>
+		<item key="DIALOG_Y_ORIGIN" value="-53"/>
+		<item key="DIALOG_WIDTH" value="866"/>
+		<item key="DIALOG_HEIGHT" value="737"/>
+		<item key="DIALOG_FONT_NAME" value="1|SF Pro Display|10.0|0|GTK|1|"/>
 	</section>
 </section>

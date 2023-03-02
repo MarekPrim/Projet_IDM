@@ -11,9 +11,16 @@ com.sun.el,2.2.0.v201303151357,file:/home/greenteam/.p2/pool/plugins/com.sun.el_
 com.sun.jna,5.12.1,file:/home/greenteam/.p2/pool/plugins/com.sun.jna_5.12.1.jar,4,false
 com.sun.jna.platform,5.12.1,file:/home/greenteam/.p2/pool/plugins/com.sun.jna.platform_5.12.1.jar,4,false
 fr.n7.eclipse.plugin,1.0.0.qualifier,file:/home/greenteam/N7/S8/S8/IDM/fr.n7.eclipse.plugin/,4,false
+fr.n7.petriNet.testAcceleo,1.0.0.qualifier,file:/home/greenteam/N7/S8/S8/IDM/fr.n7.petriNet.testAcceleo/,4,false
+fr.n7.petriNet.toDOT,1.0.0.qualifier,file:/home/greenteam/N7/S8/S8/IDM/fr.n7.petriNet.toDOT/,4,false
+fr.n7.petriNetwork,1.0.0.qualifier,file:/home/greenteam/N7/S8/S8/IDM/fr.n7.petriNetwork/,4,false
+fr.n7.petriNetwork.toTina,1.0.0.qualifier,file:/home/greenteam/N7/S8/S8/IDM/fr.n7.petriNetwork.toTina/,4,false
 fr.n7.simplePDL,1.0.0.qualifier,file:/home/greenteam/N7/S8/S8/IDM/fr.n7.simplePDL/,4,false
 fr.n7.simplePDL.edit,1.0.0.qualifier,file:/home/greenteam/N7/S8/S8/IDM/fr.n7.simplePDL.edit/,4,false
 fr.n7.simplePDL.editor,1.0.0.qualifier,file:/home/greenteam/N7/S8/S8/IDM/fr.n7.simplePDL.editor/,4,false
+fr.n7.simplePDL.tests,1.0.0.qualifier,file:/home/greenteam/N7/S8/S8/IDM/fr.n7.simplePDL.tests/,4,false
+fr.n7.simplePDL.toDot,1.0.0.qualifier,file:/home/greenteam/N7/S8/S8/IDM/fr.n7.simplePDL.toDot/,4,false
+fr.n7.simplePDL.toHTML,1.0.0.qualifier,file:/home/greenteam/N7/S8/S8/IDM/fr.n7.simplePDL.toHTML/,4,false
 io.github.classgraph,4.8.149.v20220915-0556,file:/home/greenteam/.p2/pool/plugins/io.github.classgraph_4.8.149.v20220915-0556.jar,4,false
 jakarta.servlet-api,4.0.0,file:/home/greenteam/.p2/pool/plugins/jakarta.servlet-api_4.0.0.jar,4,false
 javaewah,1.1.13.v20211029-0839,file:/home/greenteam/.p2/pool/plugins/javaewah_1.1.13.v20211029-0839.jar,4,false

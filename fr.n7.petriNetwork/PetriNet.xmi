@@ -5,29 +5,29 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:petrie="http://petrie"
     xsi:schemaLocation="http://petrie petrie.ecore"
-    name="example">
+    name="test">
   <petriElements
       xsi:type="petrie:Place"
-      name="depart"
-      outgoing="//@petriElements.1"
-      marking="2"/>
+      name="p1"
+      outgoing="//@petriElements.3"
+      marking="3"/>
   <petriElements
-      xsi:type="petrie:Arc"
-      weight="1"
+      xsi:type="petrie:Place"
+      name="p2"
+      incoming="//@petriElements.4"/>
+  <petriElements
+      xsi:type="petrie:Transition"
+      name="t"
+      incoming="//@petriElements.3"
+      outgoing="//@petriElements.4"/>
+  <petriElements
+      xsi:type="petrie:ArcSimple"
+      weight="2"
       target="//@petriElements.2"
       source="//@petriElements.0"/>
   <petriElements
-      xsi:type="petrie:Transition"
-      name="transition"
-      incoming="//@petriElements.1"
-      outgoing="//@petriElements.3"/>
-  <petriElements
-      xsi:type="petrie:Arc"
-      weight="2"
-      target="//@petriElements.4"
+      xsi:type="petrie:ArcSimple"
+      weight="1"
+      target="//@petriElements.1"
       source="//@petriElements.2"/>
-  <petriElements
-      xsi:type="petrie:Place"
-      name="sortie"
-      incoming="//@petriElements.3"/>
 </petrie:PetriNet>

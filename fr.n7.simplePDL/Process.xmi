@@ -6,18 +6,4 @@
     xmlns:simplepdl="http://simplepdl"
     xsi:schemaLocation="http://simplepdl SimplePDL.ecore.ecore"
     name="DEV">
-  <processElement/>
-  <processElement
-      xsi:type="simplepdl:WorkSequence"
-      linkType="startToFinish"
-      predecessor="//@processElement.2"
-      successor="//@processElement.3"/>
-  <processElement
-      xsi:type="simplepdl:WorkDefinition"
-      linksToSuccessors="//@processElement.1"
-      name="Prog"/>
-  <processElement
-      xsi:type="simplepdl:WorkDefinition"
-      linksToPredecessors="//@processElement.1"
-      name="Test"/>
 </simplepdl:Process>
