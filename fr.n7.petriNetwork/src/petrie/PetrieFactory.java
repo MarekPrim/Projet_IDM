@@ -49,15 +49,6 @@ public interface PetrieFactory extends EFactory {
 	Place createPlace();
 
 	/**
-	 * Returns a new object of class '<em>Arc</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Arc</em>'.
-	 * @generated
-	 */
-	Arc createArc();
-
-	/**
 	 * Returns a new object of class '<em>Arc Simple</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

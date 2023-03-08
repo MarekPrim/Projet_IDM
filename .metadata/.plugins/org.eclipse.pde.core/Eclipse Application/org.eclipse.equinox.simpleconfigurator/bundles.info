@@ -14,6 +14,8 @@ fr.n7.eclipse.plugin,1.0.0.qualifier,file:/home/greenteam/N7/S8/S8/IDM/fr.n7.ecl
 fr.n7.petriNet.testAcceleo,1.0.0.qualifier,file:/home/greenteam/N7/S8/S8/IDM/fr.n7.petriNet.testAcceleo/,4,false
 fr.n7.petriNet.toDOT,1.0.0.qualifier,file:/home/greenteam/N7/S8/S8/IDM/fr.n7.petriNet.toDOT/,4,false
 fr.n7.petriNetwork,1.0.0.qualifier,file:/home/greenteam/N7/S8/S8/IDM/fr.n7.petriNetwork/,4,false
+fr.n7.petriNetwork.edit,1.0.0.qualifier,file:/home/greenteam/N7/S8/S8/IDM/fr.n7.petriNetwork.edit/,4,false
+fr.n7.petriNetwork.editor,1.0.0.qualifier,file:/home/greenteam/N7/S8/S8/IDM/fr.n7.petriNetwork.editor/,4,false
 fr.n7.petriNetwork.toTina,1.0.0.qualifier,file:/home/greenteam/N7/S8/S8/IDM/fr.n7.petriNetwork.toTina/,4,false
 fr.n7.simplePDL,1.0.0.qualifier,file:/home/greenteam/N7/S8/S8/IDM/fr.n7.simplePDL/,4,false
 fr.n7.simplePDL.edit,1.0.0.qualifier,file:/home/greenteam/N7/S8/S8/IDM/fr.n7.simplePDL.edit/,4,false

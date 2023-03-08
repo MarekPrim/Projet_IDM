@@ -29,7 +29,7 @@ import petrie.PetriePackage;
  *
  * @generated
  */
-public class ArcImpl extends PetriElementImpl implements Arc {
+public abstract class ArcImpl extends PetriElementImpl implements Arc {
 	/**
 	 * The default value of the '{@link #getWeight() <em>Weight</em>}' attribute.
 	 * <!-- begin-user-doc -->

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated petrie -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="petrie.presentation.PetrieModelWizardID"
+            name="%_UI_PetrieModelWizard_label"
+            class="petrie.presentation.PetrieModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/PetrieModelFile.gif">
+         <description>%_UI_PetrieModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated petrie -->
+      <editor
+            id="petrie.presentation.PetrieEditorID"
+            name="%_UI_PetrieEditor_label"
+            icon="icons/full/obj16/PetrieModelFile.gif"
+            extensions="petrie"
+            class="petrie.presentation.PetrieEditor"
+            contributorClass="petrie.presentation.PetrieActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

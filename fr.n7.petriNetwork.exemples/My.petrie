@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<petrie:PetriNet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:petrie="http://petrie">
+  <petriElements xsi:type="petrie:Transition" name="t" incoming="//@petriElements.4" outgoing="//@petriElements.3"/>
+  <petriElements xsi:type="petrie:Place" name="p1" outgoing="//@petriElements.4" marking="3"/>
+  <petriElements xsi:type="petrie:Place" name="p2" incoming="//@petriElements.3"/>
+  <petriElements xsi:type="petrie:ArcSimple" weight="1" target="//@petriElements.2" source="//@petriElements.0"/>
+  <petriElements xsi:type="petrie:ArcSimple" weight="2" target="//@petriElements.0" source="//@petriElements.1"/>
+</petrie:PetriNet>

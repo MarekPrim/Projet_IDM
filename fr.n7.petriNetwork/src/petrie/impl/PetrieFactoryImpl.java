@@ -59,7 +59,6 @@ public class PetrieFactoryImpl extends EFactoryImpl implements PetrieFactory {
 			case PetriePackage.PETRI_NET: return createPetriNet();
 			case PetriePackage.TRANSITION: return createTransition();
 			case PetriePackage.PLACE: return createPlace();
-			case PetriePackage.ARC: return createArc();
 			case PetriePackage.ARC_SIMPLE: return createArcSimple();
 			case PetriePackage.ARC_READ: return createArcRead();
 			default:
@@ -95,16 +94,6 @@ public class PetrieFactoryImpl extends EFactoryImpl implements PetrieFactory {
 	public Place createPlace() {
 		PlaceImpl place = new PlaceImpl();
 		return place;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Arc createArc() {
-		ArcImpl arc = new ArcImpl();
-		return arc;
 	}
 
 	/**

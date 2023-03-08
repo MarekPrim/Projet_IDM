@@ -154,7 +154,7 @@ public class WorkSequenceItemProvider extends ProcessElementItemProvider {
 	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public void notifyChanged(Notification notification) {
@@ -162,6 +162,12 @@ public class WorkSequenceItemProvider extends ProcessElementItemProvider {
 
 		switch (notification.getFeatureID(WorkSequence.class)) {
 			case SimplepdlPackage.WORK_SEQUENCE__LINK_TYPE:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+			case SimplepdlPackage.WORK_SEQUENCE__PREDECESSOR:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+			case SimplepdlPackage.WORK_SEQUENCE__SUCCESSOR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

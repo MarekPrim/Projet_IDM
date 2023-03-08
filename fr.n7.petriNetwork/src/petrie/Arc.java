@@ -18,7 +18,7 @@ package petrie;
  * </ul>
  *
  * @see petrie.PetriePackage#getArc()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface Arc extends PetriElement {
