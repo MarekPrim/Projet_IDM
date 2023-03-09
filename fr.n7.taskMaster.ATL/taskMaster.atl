@@ -1,0 +1,29 @@
+-- @path SimplePDL=/fr.n7.simplePDL/SimplePDL.ecore
+-- @path TaskMaster=/fr.n7.taskMaster/TaskMaster.ecore
+
+module taskMaster;
+create OUT : TaskMaster from IN : SimplePDL;
+
+rule Process2EventBundle {
+from process : SimplePDL!Process
+to bundle : TaskMaster!EventBundle(name <- process.name)
+}
+rule WD2Task {
+from wd : SimplePDL!WorkDefinition
+to event_start : TaskMaster!Event(bundle <- wd.getProcess(), name <- wd.name + '_start'),
+event_finish: TaskMaster!Event(bundle <- wd.getProcess(), name <- wd.name + '_finish'),
+finish_after_start: TaskMaster!Causal(event <- event_finish, target <- event_start)
+}
+
+rule WS2Requirement {
+from ws : SimplePDL!WorkSequence
+to req : TaskMaster!Causal(
+event <- thisModule.resolveTemp(ws.successor, 'event_' + (if ws.linkType = #s2s or ws.linkType
+= #f2s then 'start' else 'finish' endif))
+)
+}
+
+
+helper context SimplePDL!ProcessElement
+def: getProcess() : SimplePDL!Process =
+SimplePDL!Process.allInstances()->select(x | x.processElement->includes(self));

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="NewWizardAction">
-		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.emf.importer.ui.EMFModelWizard"/>
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="atlFileWizard"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="atlWizard"/>
 			<item value="org.eclipse.emf.codegen.ecore.ui.wizardCategory"/>
 			<item value="org.eclipse.emf.parsley.wizards"/>
 			<item value="org.eclipse.emf.parsley.wizards/org.eclipse.emf.parsley.project.Examples"/>
@@ -22,6 +23,8 @@
 		<item key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID" value="false"/>
 		<item key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID" value="false"/>
 		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="/home/greenteam/N7/S8/S8/IDM/fr.n7.simplePDL.toPetriNetwork.ATL"/>
+			<item value="/home/greenteam/Téléchargements"/>
 			<item value="/home/greenteam/N7/S8/S8/IDM_not_workspace"/>
 		</list>
 	</section>

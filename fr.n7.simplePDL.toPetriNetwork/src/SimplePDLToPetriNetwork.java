@@ -20,7 +20,7 @@ import simplepdl.SimplepdlPackage;
 import petrie.PetriNet;
 import petrie.PetrinetFactory;
 import petrie.PetrinetPackage;
-import petrie.Arc;
+import petrie.ArcSimple;
 import petrie.Place;
 import petrie.Transition;
 import petrie.Node;
@@ -114,41 +114,36 @@ public class SimplePDLtoPetrieNetwork {
  	 			
 				
  	 			// WorkDefinition Arcs
- 	 			Arc ready2start = myFactory.createArc();
+ 	 			ArcSimple ready2start = myFactory.createArc();
  	 			ready2start.setWeight(1);
- 	 			ready2start.setIsReadArc(false);
  	 			ready2start.setSource(ready);
  	 			ready2start.setTarget(start);
  	 			ready2start.setPetrinet(petrie);
  	 			petrie.getPetriElements().add(ready2start);
  	 			
- 	 			Arc start2running = myFactory.createArc();
+ 	 			ArcSimple start2running = myFactory.createArc();
  	 			start2running.setWeight(1);
- 	 			start2running.setIsReadArc(false);
  	 			start2running.setSource(start);
  	 			start2running.setTarget(running);
  	 			start2running.setPetrinet(petrie);
  	 			petrie.getPetriElements().add(start2running);
  	 			
- 	 			Arc start2started = myFactory.createArc();
+ 	 			ArcSimple start2started = myFactory.createArc();
  	 			start2started.setWeight(1);
- 	 			start2started.setIsReadArc(false);
  	 			start2started.setSource(start);
  	 			start2started.setTarget(started);
  	 			start2started.setPetrinet(petrie);
  	 			petrie.getPetriElements().add(start2started);
  	 			
- 	 			Arc running2finish = myFactory.createArc();
+ 	 			ArcSimple running2finish = myFactory.createArc();
  	 			running2finish.setWeight(1);
- 	 			running2finish.setIsReadArc(false);
  	 			running2finish.setSource(running);
  	 			running2finish.setTarget(finish);
  	 			running2finish.setPetrinet(petrie);
  	 			petrie.getPetriElements().add(running2finish);
  	 			
- 	 			Arc finish2finished = myFactory.createArc();
+ 	 			ArcSimple finish2finished = myFactory.createArc();
  	 			finish2finished.setWeight(1);
- 	 			finish2finished.setIsReadArc(false);
  	 			finish2finished.setSource(finish);
  	 			finish2finished.setTarget(finished);
  	 			finish2finished.setPetrinet(petrie);
@@ -176,18 +171,17 @@ public class SimplePDLtoPetrieNetwork {
  				petrie.getPetriElements().add(prs);
  				
  				for (Need ne : rs.getNeeds()) {		// Needs
- 					Arc anLoad = myFactory.createArc();
+ 					ArcSimple anLoad = myFactory.createArc();
  	 				anLoad.setWeight(ne.getNbResources());
- 	 				anLoad.setIsReadArc(false);
+ 	 				
  	 				anLoad.setSource(prs);
  	 				anLoad.setTarget((Node) petrie.getPetriElements().stream().filter(p -> p instanceof Node).filter(n -> ((Node) n).getName()
  	 	 					.equals(ne.getWorkdefinition().getName() + "_start")).toArray()[0]);
  	 				anLoad.setPetrinet(petrie);
  	 				petrie.getPetriElements().add(anLoad);
  	 				
- 	 				Arc anRelease = myFactory.createArc();
+ 	 				ArcSimple anRelease = myFactory.createArc();
  	 				anRelease.setWeight(ne.getNbResources());
- 	 				anRelease.setIsReadArc(false);
  	 				anRelease.setSource((Node) petrie.getPetriElements().stream().filter(p -> p instanceof Node).filter(n -> ((Node) n).getName()
  	 	 					.equals(ne.getWorkdefinition().getName() + "_finish")).toArray()[0]);
  	 				anRelease.setTarget(prs);

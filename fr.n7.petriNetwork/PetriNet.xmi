@@ -1,33 +1,37 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<petrie:PetriNet
-    xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:petrie="http://petrie"
-    xsi:schemaLocation="http://petrie petrie.ecore"
-    name="test">
-  <petriElements
-      xsi:type="petrie:Place"
-      name="p1"
-      outgoing="//@petriElements.3"
-      marking="3"/>
-  <petriElements
-      xsi:type="petrie:Place"
-      name="p2"
-      incoming="//@petriElements.4"/>
-  <petriElements
-      xsi:type="petrie:Transition"
-      name="t"
-      incoming="//@petriElements.3"
-      outgoing="//@petriElements.4"/>
-  <petriElements
-      xsi:type="petrie:ArcSimple"
-      weight="2"
-      target="//@petriElements.2"
-      source="//@petriElements.0"/>
-  <petriElements
-      xsi:type="petrie:ArcSimple"
-      weight="1"
-      target="//@petriElements.1"
-      source="//@petriElements.2"/>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<petrie:PetriNet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:petrie="http://petrie" xsi:schemaLocation="http://petrie petrie.ecore" name="Test">
+  <petriElements xsi:type="petrie:Place" name="dev_ready" outgoing="//@petriElements.6" marking="1"/>
+  <petriElements xsi:type="petrie:Place" name="dev_running" incoming="//@petriElements.7" outgoing="//@petriElements.9"/>
+  <petriElements xsi:type="petrie:Place" name="dev_started" incoming="//@petriElements.8"/>
+  <petriElements xsi:type="petrie:Place" name="dev_finished" incoming="//@petriElements.10"/>
+  <petriElements xsi:type="petrie:Transition" name="dev_start" incoming="//@petriElements.6" outgoing="//@petriElements.7 //@petriElements.8"/>
+  <petriElements xsi:type="petrie:Transition" name="dev_finish" incoming="//@petriElements.9" outgoing="//@petriElements.10"/>
+  <petriElements xsi:type="petrie:ArcSimple" weight="1" target="//@petriElements.4" source="//@petriElements.0"/>
+  <petriElements xsi:type="petrie:ArcSimple" weight="1" target="//@petriElements.1" source="//@petriElements.4"/>
+  <petriElements xsi:type="petrie:ArcSimple" weight="1" target="//@petriElements.2" source="//@petriElements.4"/>
+  <petriElements xsi:type="petrie:ArcSimple" weight="1" target="//@petriElements.5" source="//@petriElements.1"/>
+  <petriElements xsi:type="petrie:ArcSimple" weight="1" target="//@petriElements.3" source="//@petriElements.5"/>
+  <petriElements xsi:type="petrie:Place" name="conception_ready" outgoing="//@petriElements.17" marking="1"/>
+  <petriElements xsi:type="petrie:Place" name="conception_running" incoming="//@petriElements.18" outgoing="//@petriElements.20"/>
+  <petriElements xsi:type="petrie:Place" name="conception_started" incoming="//@petriElements.19" outgoing="//@petriElements.33"/>
+  <petriElements xsi:type="petrie:Place" name="conception_finished" incoming="//@petriElements.21"/>
+  <petriElements xsi:type="petrie:Transition" name="conception_start" incoming="//@petriElements.17" outgoing="//@petriElements.18 //@petriElements.19"/>
+  <petriElements xsi:type="petrie:Transition" name="conception_finish" incoming="//@petriElements.20" outgoing="//@petriElements.21"/>
+  <petriElements xsi:type="petrie:ArcSimple" weight="1" target="//@petriElements.15" source="//@petriElements.11"/>
+  <petriElements xsi:type="petrie:ArcSimple" weight="1" target="//@petriElements.12" source="//@petriElements.15"/>
+  <petriElements xsi:type="petrie:ArcSimple" weight="1" target="//@petriElements.13" source="//@petriElements.15"/>
+  <petriElements xsi:type="petrie:ArcSimple" weight="1" target="//@petriElements.16" source="//@petriElements.12"/>
+  <petriElements xsi:type="petrie:ArcSimple" weight="1" target="//@petriElements.14" source="//@petriElements.16"/>
+  <petriElements xsi:type="petrie:Place" name="prog_ready" outgoing="//@petriElements.28" marking="1"/>
+  <petriElements xsi:type="petrie:Place" name="prog_running" incoming="//@petriElements.29" outgoing="//@petriElements.31"/>
+  <petriElements xsi:type="petrie:Place" name="prog_started" incoming="//@petriElements.30"/>
+  <petriElements xsi:type="petrie:Place" name="prog_finished" incoming="//@petriElements.32"/>
+  <petriElements xsi:type="petrie:Transition" name="prog_start" incoming="//@petriElements.28 //@petriElements.33" outgoing="//@petriElements.29 //@petriElements.30"/>
+  <petriElements xsi:type="petrie:Transition" name="prog_finish" incoming="//@petriElements.31" outgoing="//@petriElements.32"/>
+  <petriElements xsi:type="petrie:ArcSimple" weight="1" target="//@petriElements.26" source="//@petriElements.22"/>
+  <petriElements xsi:type="petrie:ArcSimple" weight="1" target="//@petriElements.23" source="//@petriElements.26"/>
+  <petriElements xsi:type="petrie:ArcSimple" weight="1" target="//@petriElements.24" source="//@petriElements.26"/>
+  <petriElements xsi:type="petrie:ArcSimple" weight="1" target="//@petriElements.27" source="//@petriElements.23"/>
+  <petriElements xsi:type="petrie:ArcSimple" weight="1" target="//@petriElements.25" source="//@petriElements.27"/>
+  <petriElements xsi:type="petrie:ArcRead" weight="1" target="//@petriElements.26" source="//@petriElements.13"/>
 </petrie:PetriNet>

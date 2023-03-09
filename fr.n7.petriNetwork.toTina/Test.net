@@ -1,0 +1,19 @@
+pl dev_ready (1)
+pl dev_running (0)
+pl dev_started (0)
+pl dev_finished (0)
+pl conception_ready (1)
+pl conception_running (0)
+pl conception_started (0)
+pl conception_finished (0)
+pl prog_ready (1)
+pl prog_running (0)
+pl prog_started (0)
+pl prog_finished (0)
+
+tr dev_start dev_ready -> dev_running dev_started
+tr dev_finish dev_running -> dev_finished
+tr conception_start conception_ready -> conception_running conception_started
+tr conception_finish conception_running -> conception_finished
+tr prog_start prog_ready conception_started?1 -> prog_running prog_started
+tr prog_finish prog_running -> prog_finished

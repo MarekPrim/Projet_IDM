@@ -5,14 +5,19 @@
 [template public toDOT(aPetriNet : PetriNet)]
 [comment @main/]
 [file (aPetriNet.name.concat('.dot'), false, 'UTF-8')]
-diagraph [aPetriNet.name/]{
+digraph [aPetriNet.name/]{
 [for (trs : Transition | aPetriNet.getTransitions())]
-['"'+trs.name+'"'/] ['[shape=square,label'+trs.name+']'/]
+['"'+trs.name+'"'/] ['[shape=square,label="'+trs.name+'"]'/]
 [/for]
 [for (place: Place | aPetriNet.getPlaces())]
-['"'+place.name+'"'/] ['[shape=circle,label'+place.name+']'/]
+['"'+place.name+'"'/] ['[shape=circle,label="'+place.name+'"]'/]
 [/for]
-(*TODO : Arcs*)
+[for (arcs : ArcSimple | aPetriNet.getArcsSimple())]
+['"'+arcs.source.name+'"' + ' -> ' + '"'+arcs.target.name+'"'/] ['[label="'+arcs.weight+'"]'/]
+[/for]
+[for (arcs : ArcRead | aPetriNet.getArcsRead())]
+['"'+arcs.source.name+'"' + ' -> ' + '"'+arcs.target.name+'"'/] ['[label="read"]'/]
+[/for]
 }
 	
 [/file]
@@ -30,8 +35,14 @@ diagraph [aPetriNet.name/]{
         ->asOrderedSet()
 /]
 
-[query public getArcs(p: PetriNet) : OrderedSet(Arc) =
-	p.petriElements->select(e | e.oclIsTypeOf(Arc))
-		->collect(e | e.oclAsType(Arc))
+[query public getArcsSimple(p: PetriNet) : OrderedSet(ArcSimple) =
+	p.petriElements->select(e | e.oclIsTypeOf(ArcSimple))
+		->collect(e | e.oclAsType(ArcSimple))
+		->asOrderedSet()
+/]
+
+[query public getArcsRead(p: PetriNet) : OrderedSet(ArcRead) =
+	p.petriElements->select(e | e.oclIsTypeOf(ArcRead))
+		->collect(e | e.oclAsType(ArcRead))
 		->asOrderedSet()
 /]

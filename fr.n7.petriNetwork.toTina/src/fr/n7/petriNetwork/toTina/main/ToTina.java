@@ -20,6 +20,8 @@ import org.eclipse.acceleo.engine.generation.strategy.IAcceleoGenerationStrategy
 import org.eclipse.acceleo.engine.service.AbstractAcceleoGenerator;
 import org.eclipse.emf.common.util.BasicMonitor;
 import org.eclipse.emf.common.util.Monitor;
+//import org.eclipse.emf.common.util.BasicMonitor;
+//import org.eclipse.emf.common.util.Monitor;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.ResourceSet;
