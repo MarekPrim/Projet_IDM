@@ -14,7 +14,7 @@ rule Process2PetriNet {
 	to pn: Petrie!PetriNet (name <- p.name)
 }
 
--- Traduire une WorkDefinition en un motif sur le réseau de Petri
+-- WorkDefinition to Place
 rule WorkDefinition2PetriNet {
 	from wd: SimplePDL!WorkDefinition
 	to
@@ -43,7 +43,7 @@ rule WorkDefinition2PetriNet {
 			petrinet <- wd.getProcess()
 		),
 		
-		-- TRANSITIONS d'une WorkDefinition
+		-- WD w/ Transition
 		t_start: Petrie!Transition(
 			name <- wd.name + '_start',
 			petrinet <- wd.getProcess()
@@ -92,7 +92,7 @@ rule WorkDefinition2PetriNet {
 		
 }
 
--- Traduire un ProcessElement en un motif sur le réseau de petri
+-- ProcessElement to ArcRead
 rule WorkSequence2PetriNet {
 	from ws: SimplePDL!WorkSequence
 	to aws: Petrie!ArcRead(
@@ -103,7 +103,7 @@ rule WorkSequence2PetriNet {
 	)
 }
 
--- Traduire une Ressource en un motif sur le réseau de petri
+-- Ressource vers Place
 rule ressource2PetriNet {
 	from rs: SimplePDL!Ressource
 	to prs: Petrie!Place(
@@ -113,16 +113,17 @@ rule ressource2PetriNet {
 	)
 }
 
--- Traduire un Besoin en un motif sur le réseau de petri
--- Remarque: Need n'hérite pas de ProcessElements : en l'occurrence, on doit passer
--- par la ressource (ou la WorkDefinition) liée au Need pour récup le Process
+-- Need 2 Place
 rule Need2PetriNet {
 	from ne: SimplePDL!Need
 	to 
 		an_load: Petrie!ArcSimple(
 				weight <- ne.nbRessources,
 				source <- ne.ressource,
+				
 				target <- thisModule.resolveTemp(ne.workdefinition, 't_start'),
+				-- On utilise ce helper pour résoudre le nom de la place à partir de l'élément racine
+				-- car Need n'hérite pas de ProcessElement
 				petrinet <- ne.ressource.getProcess()
 		),
 		an_release: Petrie!ArcSimple(
