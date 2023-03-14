@@ -24,7 +24,7 @@ import petrie.ArcSimple;
 import petrie.Place;
 import petrie.Transition;
 import petrie.Node;
-
+@Deprecated
 public class SimplePDLtoPetrieNetwork {
 
 	public static Process loadProcess(String modelPath) {
