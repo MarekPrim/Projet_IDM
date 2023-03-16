@@ -1,24 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="NewWizardAction">
-		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.xtext.xtext.ui.wizard.project.NewXtextProjectWizard"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
-			<item value="org.eclipse.ui.Basic"/>
-			<item value="org.eclipse.acceleo.ide.ui"/>
-			<item value="org.eclipse.emf.codegen.ecore.ui.wizardCategory"/>
-			<item value="org.eclipse.emf.parsley.wizards"/>
-			<item value="org.eclipse.jdt.ui.java"/>
-			<item value="org.eclipse.pde.PDE"/>
+			<item value="org.eclipse.xtend.ide.wizards"/>
+			<item value="org.eclipse.xtend.ide.wizards/org.eclipse.xtend.project.Examples"/>
+			<item value="org.eclipse.xtext.projectwiz"/>
+			<item value="org.eclipse.xtext.projectwiz/org.eclipse.xtext.project.Examples"/>
 			<item value="org.eclipse.ui.Examples"/>
-			<item value="org.eclipse.ui.Examples/org.eclipse.acceleo.examples.category"/>
-			<item value="org.eclipse.ui.Examples/org.eclipse.emf.cdo.examples"/>
-			<item value="org.eclipse.ui.Examples/org.eclipse.emf.examples.EMF"/>
-			<item value="org.eclipse.ui.Examples/org.eclipse.emf.query.examples.category"/>
-			<item value="org.eclipse.ui.Examples/org.eclipse.emf.transaction.examples.category"/>
-			<item value="org.eclipse.ui.Examples/org.eclipse.emf.parsley.ui.Examples"/>
-			<item value="org.eclipse.ui.Examples/org.eclipse.emf.validation.examples.category"/>
-			<item value="org.eclipse.ui.Examples/org.eclipse.gmf.examples.runtime"/>
-			<item value="org.eclipse.ui.Examples/org.eclipse.xsd.examples.XSD"/>
+			<item value="org.eclipse.ui.Examples/org.eclipse.xtend.ui.Examples"/>
+			<item value="org.eclipse.ui.Examples/org.eclipse.xtext.ui.Examples"/>
 		</list>
 	</section>
 	<section name="BasicNewProjectResourceWizard">

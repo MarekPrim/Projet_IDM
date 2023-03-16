@@ -1,0 +1,37 @@
+grammar fr.n7.simplePDL.TextSimplePDL with org.eclipse.xtext.common.Terminals
+
+generate textSimplePDL "http://www.n7.fr/simplePDL/TextSimplePDL"
+
+
+
+Process : 'process' name=ID '{'
+    processElement+=ProcessElement*
+'}' 
+;
+
+WorkDefinition:
+	 'wd'  name=ID '{'
+	  (needs+=Need)?
+	 '}'
+;
+
+WorkSequence : 'ws'
+	linkType = WorkSequenceType
+	'from' predecessor=[WorkDefinition]
+	'to' successor=[WorkDefinition]
+;
+	
+enum WorkSequenceType : startToStart = 'startToStart' 
+    | finishToStart = 'finishToStart'
+    | startToFinish = 'startToFinish'
+    | finishToFinish = 'finishToFinish';	
+	
+ProcessElement:
+	WorkDefinition | WorkSequence | Guidance | Resource
+;
+
+Guidance: 'note' text=STRING ('for' elements+=[ProcessElement] ( "," elements+=[ProcessElement])* )?;
+
+Need : 'need' nbResources=INT 'of' resource=[Resource];
+    
+Resource : 'resource' nbAvailableResources=INT 'of' name=ID;
