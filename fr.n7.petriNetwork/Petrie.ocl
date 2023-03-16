@@ -59,5 +59,8 @@ inv noRedundantNeed('Two Arcs with the same source and the same target should no
 context Transition
 inv timeIsStriclyPositive('Time interval in Transition should be positive'):
 	self.min >= 0 and self.max >= 0
+	
+inv timeDeltaIsStriclyPositive('Time delta interval between min and max in Transition should be positive'):
+	self.max - self.min >= 0
 		
 endpackage

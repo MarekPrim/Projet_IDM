@@ -21,10 +21,10 @@ WorkSequence : 'ws'
 	'to' successor=[WorkDefinition]
 ;
 	
-enum WorkSequenceType : startToStart = 'startToStart' 
+enum WorkSequenceType : startToStart = 'startToStart'
     | finishToStart = 'finishToStart'
     | startToFinish = 'startToFinish'
-    | finishToFinish = 'finishToFinish';	
+    | finishToFinish = 'finishToFinish';
 	
 ProcessElement:
 	WorkDefinition | WorkSequence | Guidance | Resource

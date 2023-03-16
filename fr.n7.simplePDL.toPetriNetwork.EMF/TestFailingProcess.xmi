@@ -4,21 +4,18 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:simplepdl="http://simplepdl"
-    xsi:schemaLocation="http://simplepdl SimplePDL.ecore"
+    xsi:schemaLocation="http://simplepdl ../fr.n7.simplePDL/SimplePDL.ecore"
     name="Test">
   <processElement
       xsi:type="simplepdl:WorkDefinition"
-      name="dev"/>
-  <processElement
-      xsi:type="simplepdl:WorkDefinition"
-      linksToSuccessors="//@processElement.2"
+      linksToSuccessors="//@processElement.1"
       name="conception"/>
   <processElement
       xsi:type="simplepdl:WorkSequence"
-      predecessor="//@processElement.1"
-      successor="//@processElement.3"/>
+      predecessor="//@processElement.0"
+      successor="//@processElement.2"/>
   <processElement
       xsi:type="simplepdl:WorkDefinition"
-      linksToPredecessors="//@processElement.2"
+      linksToPredecessors="//@processElement.1"
       name="prog"/>
 </simplepdl:Process>

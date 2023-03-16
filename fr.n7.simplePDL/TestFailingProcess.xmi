@@ -11,14 +11,17 @@
       name="dev"/>
   <processElement
       xsi:type="simplepdl:WorkDefinition"
+      linksToPredecessors="//@processElement.2"
       linksToSuccessors="//@processElement.2"
-      name="conception"/>
+      name=""/>
   <processElement
       xsi:type="simplepdl:WorkSequence"
       predecessor="//@processElement.1"
-      successor="//@processElement.3"/>
+      successor="//@processElement.1"/>
   <processElement
       xsi:type="simplepdl:WorkDefinition"
-      linksToPredecessors="//@processElement.2"
       name="prog"/>
+  <processElement
+      xsi:type="simplepdl:Ressource"
+      name="n"/>
 </simplepdl:Process>

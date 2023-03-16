@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<petrie:PetriNet
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:petrie="http://petrie"
+    xsi:schemaLocation="http://petrie petrie.ecore"
+    name="test">
+  <petriElements
+      xsi:type="petrie:Place"
+      name="p1"
+      incoming="//@petriElements.3"
+      outgoing="//@petriElements.3"
+      marking="-3"/>
+  <petriElements
+      xsi:type="petrie:Place"
+      name=""
+      incoming="//@petriElements.4 //@petriElements.5"/>
+  <petriElements
+      xsi:type="petrie:Transition"
+      name="t"
+      outgoing="//@petriElements.4 //@petriElements.5"
+      min="13"
+      max="3"/>
+  <petriElements
+      xsi:type="petrie:ArcSimple"
+      weight="-2"
+      target="//@petriElements.0"
+      source="//@petriElements.0"/>
+  <petriElements
+      xsi:type="petrie:ArcSimple"
+      weight="1"
+      target="//@petriElements.1"
+      source="//@petriElements.2"/>
+  <petriElements
+      xsi:type="petrie:ArcRead"
+      weight="2"
+      target="//@petriElements.1"
+      source="//@petriElements.2"/>
+  <petriElements
+      xsi:type="petrie:Place"
+      name="p1"
+      marking="1"/>
+  <petriElements
+      xsi:type="petrie:Transition"
+      name="T"
+      min="-1"
+      max="0"/>
+</petrie:PetriNet>
