@@ -313,7 +313,7 @@ public interface SimplepdlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NEED__NB_RESSOURCES = 0;
+	int NEED__NB_RESSOURCES = PROCESS_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Ressource</b></em>' reference.
@@ -322,7 +322,7 @@ public interface SimplepdlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NEED__RESSOURCE = 1;
+	int NEED__RESSOURCE = PROCESS_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Work Definition</b></em>' reference.
@@ -331,7 +331,7 @@ public interface SimplepdlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NEED__WORK_DEFINITION = 2;
+	int NEED__WORK_DEFINITION = PROCESS_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Need</em>' class.
@@ -340,7 +340,7 @@ public interface SimplepdlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NEED_FEATURE_COUNT = 3;
+	int NEED_FEATURE_COUNT = PROCESS_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Need</em>' class.
@@ -349,7 +349,7 @@ public interface SimplepdlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NEED_OPERATION_COUNT = 0;
+	int NEED_OPERATION_COUNT = PROCESS_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link simplepdl.impl.RessourceImpl <em>Ressource</em>}' class.

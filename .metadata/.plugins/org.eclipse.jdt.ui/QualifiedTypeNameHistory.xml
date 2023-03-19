@@ -8,4 +8,12 @@
     <fullyQualifiedTypeName name="org.eclipse.emf.ecore.resource.ResourceSet"/>
     <fullyQualifiedTypeName name="org.eclipse.emf.ecore.resource.impl.ResourceSetImpl"/>
     <fullyQualifiedTypeName name="petrie.Node"/>
+    <fullyQualifiedTypeName name="simplepdl.WorkSequenceType"/>
+    <fullyQualifiedTypeName name="petrie.Arc"/>
+    <fullyQualifiedTypeName name="petrie.ArcSimple"/>
+    <fullyQualifiedTypeName name="petrie.ArcRead"/>
+    <fullyQualifiedTypeName name="org.eclipse.emf.ecore.xmi.impl.XMIResourceImpl"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
 </qualifiedTypeNameHistroy>

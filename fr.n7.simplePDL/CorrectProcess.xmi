@@ -26,4 +26,9 @@
       xsi:type="simplepdl:Ressource"
       name="Ress"
       nbRessourceDisponible="2"/>
+  <processElement
+      xsi:type="simplepdl:Need"
+      nbRessources="2"
+      ressource="//@processElement.4"
+      workDefinition="//@processElement.0"/>
 </simplepdl:Process>

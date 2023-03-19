@@ -2,8 +2,6 @@
  */
 package simplepdl.tests;
 
-import junit.framework.TestCase;
-
 import junit.textui.TestRunner;
 
 import simplepdl.Need;
@@ -15,15 +13,7 @@ import simplepdl.SimplepdlFactory;
  * <!-- end-user-doc -->
  * @generated
  */
-public class NeedTest extends TestCase {
-
-	/**
-	 * The fixture for this Need test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Need fixture = null;
+public class NeedTest extends ProcessElementTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -45,23 +35,14 @@ public class NeedTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this Need test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(Need fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this Need test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	protected Need getFixture() {
-		return fixture;
+		return (Need)fixture;
 	}
 
 	/**
