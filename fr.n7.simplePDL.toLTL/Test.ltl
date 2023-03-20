@@ -1,0 +1,8 @@
+
+<> (prog_finished /\ conception_finished);
+[](prog_ready + prog_running + prog_finished = 1);
+[](conception_ready + conception_running + conception_finished = 1);
+
+[](prog_started => [] (prog_started));
+[](conception_started => [] (conception_started));
+
