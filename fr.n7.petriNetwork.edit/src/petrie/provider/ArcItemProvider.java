@@ -133,12 +133,12 @@ public class ArcItemProvider extends PetriElementItemProvider {
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public String getText(Object object) {
 		Arc arc = (Arc)object;
-		return getString("_UI_Arc_type") + " " + arc.getWeight();
+		return getString("_UI_Arc_type") + " poids " + arc.getWeight() + ":"+arc.getSource().getName()+"->"+arc.getTarget().getName();
 	}
 
 

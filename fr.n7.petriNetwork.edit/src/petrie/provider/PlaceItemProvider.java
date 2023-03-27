@@ -94,7 +94,7 @@ public class PlaceItemProvider extends NodeItemProvider {
 		String label = ((Place)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Place_type") :
-			getString("_UI_Place_type") + " " + label;
+			getString("_UI_Place_type") + " " + label +" "+((Place)object).getMarking();
 	}
 
 

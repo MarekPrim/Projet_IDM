@@ -23,6 +23,7 @@ fr.n7.simplePDL.editor,1.0.0.qualifier,file:/home/greenteam/N7/S8/S8/IDM/fr.n7.s
 fr.n7.simplePDL.tests,1.0.0.qualifier,file:/home/greenteam/N7/S8/S8/IDM/fr.n7.simplePDL.tests/,4,false
 fr.n7.simplePDL.toDot,1.0.0.qualifier,file:/home/greenteam/N7/S8/S8/IDM/fr.n7.simplePDL.toDot/,4,false
 fr.n7.simplePDL.toHTML,1.0.0.qualifier,file:/home/greenteam/N7/S8/S8/IDM/fr.n7.simplePDL.toHTML/,4,false
+fr.n7.simplePDL.toLTL,1.0.0.qualifier,file:/home/greenteam/N7/S8/S8/IDM/fr.n7.simplePDL.toLTL/,4,false
 fr.n7.simplePDL.xtext,1.0.0.qualifier,file:/home/greenteam/N7/S8/S8/IDM/fr.n7.simplePDL.xtext/,4,false
 fr.n7.simplePDL.xtext.ide,1.0.0.qualifier,file:/home/greenteam/N7/S8/S8/IDM/fr.n7.simplePDL.xtext.ide/,4,false
 fr.n7.simplePDL.xtext.tests,1.0.0.qualifier,file:/home/greenteam/N7/S8/S8/IDM/fr.n7.simplePDL.xtext.tests/,4,false
